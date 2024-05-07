@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgments: Ben Bloem-Reddy, Daniel J. McDonald
+% Revised by Javier Mtz.-Rdz.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\input{header}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% your title/author/date information go here
+\title{\bld{Project Template}} % replace with your title, a meaningful title
+\author{Javier} % replace with your name
+\date{\today} % replace with your submission date
+
+
+% start of document
+\begin{document}
+
+\maketitle
+
+% Start count in second page
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+
+% summary section
+\include{sections/summary}
+
+% mini-proposals section
+\include{sections/section1}
+
+
+\printbibliography
+
+%%%% appendix
+\include{sections/annex}
+
+\end{document}

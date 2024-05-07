@@ -1,0 +1,21 @@
+% !TEX root = ../main.tex
+
+% Summary section
+
+\appendix
+\section{Appendix}
+
+\renewcommand\thefigure{A.\arabic{figure}}\setcounter{figure}{0}
+
+
+The figure.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{bars}
+\caption{\bld{Some title} \break Some explanations}
+\label{fig:apend1}
+\end{figure} 
+
+
+\begin{lstlisting}[caption={Title}]for_to_exp <- function(formula) {  if (rlang::is_formula(formula)) formula <- rlang::as_label(formula)  eval(parse(text = paste0('rlang::expr(', gsub("~", "", formula), ')')))}\end{lstlisting}

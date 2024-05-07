@@ -1,0 +1,58 @@
+% header.tex
+% This is where you load packages, specify custom formats, etc.
+
+\usepackage[margin=1in,footskip=25pt]{geometry} 
+
+% Load shortext formating
+\usepackage[noautonum]{ ../frmt/shortex }
+
+% Load defs 
+\input{defs}
+
+% Load listings formmating 
+\input{../frmt/listings-fomt}
+
+
+% Manage colours
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set bolds for descriptions 
+\usepackage[labelfont=bf]{caption}
+
+% Set new numeration for appendices
+\usepackage{appendix}
+
+% Set up graphics
+% \usepackage{graphicx} % uncomment in case of not being using shortext
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\graphicspath{ {../figs/} }
+
+% Set bibliography
+\usepackage[authordate, backend=bibtex, 
+	sorting=nyt, bibencoding=latin1]{biblatex-chicago}
+\usepackage{breakcites}
+\bibliography{../refs/refs.bib} % add the title of your bibliography file
+
+
+%% Paragraph settings with left align
+\usepackage[document]{ragged2e}
+\setlength{\RaggedRightParindent}{2em}
+
+% Solve raged indentation 
+\usepackage{etoolbox}
+\AtBeginEnvironment{figure}{\setlength{\RaggedRightParindent}{0em}}
+\AtBeginEnvironment{table}{\setlength{\RaggedRightParindent}{0em}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% most other packages you might use should be loaded before hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set up hyperlinks: uncomment in case of not being using shortext
+%\definecolor{RefColor}{rgb}{0,0,.65}
+%\usepackage[colorlinks,linkcolor=RefColor,citecolor=RefColor,urlcolor=RefColor]{hyperref}
+
+% \usepackage[capitalize]{cleveref} % uncomment in case of not being using shortext
+\crefname{appsec}{Appendix}{Appendices} % you can tell cleveref what to call things
+\renewcommand\lstlistingname{Code}
+\crefname{listing}{code}{code}

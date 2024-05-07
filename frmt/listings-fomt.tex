@@ -1,0 +1,73 @@
+% ADD YOUR CUSTOM LISTINGS FORMAT
+
+% Set style code
+%% Needed packages
+\usepackage{listings}
+\usepackage{bm}
+\usepackage{xcolor}
+
+%% Colors
+\xdefinecolor{gray}{rgb}{0.4,0.4,0.4}
+\xdefinecolor{bluecode}{RGB}{1, 144, 188} %keep
+\xdefinecolor{codegray}{rgb}{0.5,0.5,0.5} %keep
+\xdefinecolor{codegreen}{RGB}{148, 179, 63} %keep
+\xdefinecolor{codered}{RGB}{180, 61, 71} %keep
+
+%% Set style
+\lstdefinestyle{style}{
+    backgroundcolor=\color{gray!10!white}, 
+    basicstyle=\ttfamily\footnotesize, 
+    keywordstyle=\bfseries\color{bluecode},% keyword style
+    identifierstyle=\color{black!80},
+    commentstyle=\itshape\color{codegray!100!black},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    numbersep=8pt,% space between line numbers and code
+    frame=lr,framesep=3pt,
+	tabsize=3,% sizes of tabs
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,        
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    extendedchars=true,
+    morestring=[b]",
+    morestring=[d]',
+    alsoletter={_, _.*, \_, .<-},
+    literate=
+    	{.<-}{{$\bm\leftarrow$}}1
+    	{<<-}{{$\bm\twoheadleftarrow$}}1
+        {~}{{$\bm\sim$}}1
+        {<=}{{$\bm\le$}}1
+        {>=}{{$\bm\ge$}}1
+        {!=}{{$\bm\neq$}}1
+        {^}{{$^{\bm\wedge}$}}1
+        {×}{{$\bm\times$}}1{*}{{$\bm\ast$}}1
+        {-}{-}1 
+        {(}{(}1 
+        {)}{)}1 
+        {–}{-}1
+        %{_}{\_}1
+        {`}{`}1
+        {&}{\&}1
+        {|}{|}1
+        {\%}{\%}1
+        {$}{\$}1 
+        {*}{*}1
+        {/}{/}1
+        {á}{{\'a}}1
+        {ó}{{\'o}}1,
+    alsoother={$},% becomes other
+    morekeywords={>,<,.,;,-,!,=,~},
+    otherkeywords={!=, ~, \$, \&, \%/\%, \%*\%, \%\%, <-, <<-, /},% other keywords
+}
+
+\lstset{language=R,
+	style=style}
+
+
