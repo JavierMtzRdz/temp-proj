@@ -48,7 +48,7 @@ summary(cars)
 
 > \[!NOTE\] This is a note.
 
-![](README_files/figure-gfm/pressure-1.png)<!-- -->
+<img src="figs/pressure-1.png" style="display: block; margin: auto;" />
 
 ## Authors
 
